@@ -19,6 +19,9 @@ This paper details the implementation of a smart plant pot capable of autonomous
 - **Android Application:** A dedicated Android application is developed for user interaction.
 - **Remote Monitoring:** Users can monitor the plant pot's state and control its functions through the application.
 
+- ### Bronze Prize in the 13th Hansung Engineering Competition, University of Hansung
+- Awarded: Oct 2017
+
 ## Paper
 - **An Implementation of Smart Gardening using Raspberry Pi and MQTT**
   - Kitae Hwang, **Park, Heyjin**, Jisu Kim, Lee Tae-Youn, and Jung In Hwan
