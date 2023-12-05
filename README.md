@@ -29,5 +29,5 @@ This paper details the implementation of a smart plant pot capable of autonomous
   - In *The Institute of Internet, Broadcasting and Communication (IIBC)*, 2018, vol.18, no.1, pp.151-157
   - DOI: [https://doi.org/10.7236/JIIBC.2018.18.1.151](https://doi.org/10.7236/JIIBC.2018.18.1.151)
 
-<img src="./image/greeni.jpg" alt="Greeni" width="300" height="500">
+<img src="./image/greeni.jpg" alt="Greeni" width="300" height="400">
 
