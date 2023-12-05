@@ -19,9 +19,6 @@ This paper details the implementation of a smart plant pot capable of autonomous
 - **Android Application:** A dedicated Android application is developed for user interaction.
 - **Remote Monitoring:** Users can monitor the plant pot's state and control its functions through the application.
 
-## Conclusion
-The implementation of the smart plant pot showcases the integration of various technologies for efficient plant care. The utilization of a modular container design, sensor integration, and real-time monitoring through an Android application contributes to the system's effectiveness in providing optimal conditions for plant growth.
-
 ## Paper
 - **An Implementation of Smart Gardening using Raspberry Pi and MQTT**
   - Kitae Hwang, **Park, Heyjin**, Jisu Kim, Lee Tae-Youn, and Jung In Hwan
