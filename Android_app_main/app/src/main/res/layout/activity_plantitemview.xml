@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.android.greenimainmissionlist.PlantItemView">
+
+    <ImageView
+
+        android:id="@+id/imageView1"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/image01" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="상추"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</LinearLayout>

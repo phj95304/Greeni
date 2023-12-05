@@ -1,0 +1,63 @@
+﻿Version=3.96
+AppType=StandardJava
+NumberOfModules=0
+Build1=Default,b4j.example
+NumberOfFiles=0
+NumberOfLibraries=4
+Library1=jcore
+Library2=jmqtt
+Library3=jmqttbroker
+Library4=jshell
+@EndOfDesignText@
+'Non-UI application (console / server application)
+#Region  Project Attributes 
+	#CommandLineArgs:
+	#MergeLibraries: True 
+#End Region
+
+Sub Process_Globals
+	Private broker As MqttBroker
+	Private client As MqttClient
+	Private timer1 As Timer
+End Sub
+
+Sub AppStart (Args() As String)
+	broker.Initialize("", 51042)
+	broker.DebugLog = False
+	broker.Start
+	client.Initialize("client", "tcp://127.0.0.1:51042", "pi")
+	client.Connect
+	timer1.Initialize("timer1", 1000)
+	File.Delete(File.DirApp, "temp.jpg~")
+	If ProcessIsRunning = False Then
+		Dim shl As Shell
+		shl.Initialize("shl", "raspistill", Array("-o", "temp.jpg", "-t", "0", _
+			"-tl", "1000", "-w", "640", "-h", "480", "-q", "75"))
+		shl.Run(-1)
+	Else
+		Log("raspistill is already running.")
+	End If
+	StartMessageLoop
+End Sub
+
+Sub ProcessIsRunning As Boolean
+	Dim shl As Shell
+	shl.Initialize("", "ps", Array("-a"))
+	Return shl.RunSynchronous(10000).StdOut.Contains("raspistill")
+End Sub
+Private Sub shl_ProcessCompleted (Success As Boolean, ExitCode As Int, StdOut As String, StdErr As String)
+	Log($"process completed: ${Success}, ${ExitCode}, 
+	${StdOut}
+	${StdErr}
+	"$)
+	ExitApplication2(1)
+End Sub
+
+Sub client_Connected (Success As Boolean)
+	Log($"connected: ${Success}"$)
+	timer1.Enabled = True
+End Sub
+
+Sub Timer1_Tick
+	client.Publish2("image", Bit.InputStreamToBytes(File.OpenInput(File.DirApp, "temp.jpg")), 0, False)
+End Sub

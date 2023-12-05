@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBackground">#ffffff</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="gc">#92d050</color>
+    <color name="todo">#eadeb1</color>
+    <color name="splashAppName">#9e9e9e</color>
+    <color name="backcol">#836a7b</color>
+</resources>

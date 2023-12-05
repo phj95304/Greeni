@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.android.greenimainmissionlist"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven {
+        url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
+    }
+}
+dependencies {
+    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+    compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:cardview-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+    compile 'com.github.bumptech.glide:annotations:4.0.0'
+    testCompile 'junit:junit:4.12'
+}
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:+'
+}

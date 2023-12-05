@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.greenimainmissionlist.StartActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="3.34"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/myplantbutton1"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/tmp_pot_image"
+                android:onClick="myplant01Clicked"
+                android:orientation="horizontal">
+
+            </ImageButton>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:text="식물 : "
+                    android:textColor="@color/todo"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="화분이름 : "
+                    android:textColor="@color/todo"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/myplantbutton2"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/tmp_pot_image"
+                android:onClick="myplant02Clicked"
+                android:orientation="horizontal">
+
+            </ImageButton>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:text="식물 : "
+                    android:textColor="@color/todo"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="화분이름 : "
+                    android:textColor="@color/todo"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/plusbutton1"
+        android:layout_width="387dp"
+        android:layout_height="154dp"
+        android:background="#00ff0000"
+        android:onClick="plus1Clicked"
+        app:srcCompat="@drawable/plus" />
+
+</LinearLayout>

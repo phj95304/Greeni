@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="missionText">
+        <item>물 주기</item>
+        <item>씨 뿌리기</item>
+        <item>모종심기</item>
+        <item>빛 쬐어 주기</item>
+        <item>사랑해주기</item>
+    </string-array>
+    <string-array name="missionSubText">
+        <item>물을 어느정도 주고 싶은지 궁금하다면?</item>
+        <item>씨는 어떻게 뿌려야 할까요? </item>
+        <item>모종심기는 어떻게 해야 될까요? </item>
+        <item>빛은 얼마나 쬐어줘야 될까요? </item>
+        <item>사랑해주기 팁!</item>
+    </string-array>
+
+</resources>
